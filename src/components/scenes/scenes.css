@@ -1,0 +1,256 @@
+/* Scene Base Styles */
+.scene {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Welcome Scene */
+.welcome-scene {
+    background: #050812;
+}
+
+.gradient-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            #050812 0%,
+            #0a1220 25%,
+            #0f1428 50%,
+            #0a1220 75%,
+            #050812 100%);
+    background-size: 200% 200%;
+    opacity: 0.8;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 32px;
+}
+
+.event-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #E2C78A;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.event-subtitle {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 300;
+    color: #E5E7EB;
+    margin-bottom: 48px;
+    letter-spacing: 0.05em;
+}
+
+.event-message {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 400;
+    color: #9CA3AF;
+    letter-spacing: 0.03em;
+}
+
+/* Suspense Scene Styles */
+.suspense-scene {
+    background: #050812;
+}
+
+/* Reveal Scene */
+.reveal-scene {
+    background: #050812;
+}
+
+.reveal-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.prize-label {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 600;
+    color: #E2C78A;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 32px;
+}
+
+.winner-number {
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 800;
+    color: #E5E7EB;
+    font-variant-numeric: tabular-nums;
+    position: relative;
+    text-shadow: 0 0 60px rgba(226, 199, 138, 0.3);
+    margin-bottom: 24px;
+}
+
+.ticket-label {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: 300;
+    color: #9CA3AF;
+    letter-spacing: 0.05em;
+}
+
+/* Winners Wall Scene */
+.winners-wall {
+    background: #050812;
+    padding: 64px 32px;
+    overflow-y: auto;
+}
+
+.winners-wall-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.winners-wall-header h1 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: #E2C78A;
+    margin-bottom: 12px;
+}
+
+.winners-wall-header p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    color: #9CA3AF;
+    font-weight: 300;
+}
+
+.winners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.winner-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(226, 199, 138, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.winner-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(226, 199, 138, 0.2);
+}
+
+.winner-card-prize {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #E2C78A;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.winner-card-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #E5E7EB;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 8px;
+}
+
+/* Curtain Scene */
+.curtain-scene {
+    position: relative;
+    overflow: hidden;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, #020408 0%, #050812 50%, #020408 100%);
+    z-index: 100;
+}
+
+.curtain-left {
+    left: 0;
+}
+
+.curtain-right {
+    right: 0;
+}
+
+.curtain-hint {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(226, 199, 138, 0.6);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 101;
+}
+
+/* Ready Scene (same as welcome for now) */
+.ready-scene {
+    background: #050812;
+}
+
+/* Thank You Scene */
+.thank-you-scene {
+    background: #050812;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.thank-you-content {
+    text-align: center;
+    z-index: 10;
+}
+
+.thank-you-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    color: #E2C78A;
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+}
+
+.thank-you-subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    color: #9CA3AF;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.thank-you-message {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    color: #E5E7EB;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.thank-you-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(226, 199, 138, 0.15), transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.winner-card-time {
+    font-size: 0.85rem;
+    color: #9CA3AF;
+}

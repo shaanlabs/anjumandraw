@@ -1,0 +1,103 @@
+.stage-view {
+    min-height: 100vh;
+    display: flex;
+    background: #050812;
+    color: #E5E7EB;
+    overflow: hidden;
+}
+
+.scene-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winners-sidebar {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border-left: 1px solid rgba(226, 199, 138, 0.1);
+    padding: 24px 16px;
+    overflow-y: auto;
+}
+
+.winners-sidebar h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #E2C78A;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.no-winners-msg {
+    text-align: center;
+    color: #9CA3AF;
+    font-size: 0.9rem;
+    padding: 40px 0;
+    font-style: italic;
+}
+
+.sidebar-winner {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(226, 199, 138, 0.08);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    transition: all 0.2s;
+}
+
+.sidebar-winner:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(226, 199, 138, 0.15);
+}
+
+.sidebar-prize {
+    font-size: 0.8rem;
+    color: #E2C78A;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.sidebar-ticket {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #E5E7EB;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 4px;
+}
+
+.sidebar-time {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+}
+
+/* Advance Hint */
+.advance-hint {
+    margin-top: 32px;
+    padding: 16px;
+    background: rgba(226, 199, 138, 0.05);
+    border: 1px solid rgba(226, 199, 138, 0.15);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #E2C78A;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    animation: pulse-hint 2s ease-in-out infinite;
+}
+
+@keyframes pulse-hint {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,301 @@
+.control-view {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
+    color: #E5E7EB;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.control-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(226, 199, 138, 0.2);
+}
+
+.control-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #E2C78A;
+    margin-bottom: 8px;
+}
+
+.control-subtitle {
+    font-size: 1rem;
+    color: #9CA3AF;
+    font-weight: 300;
+}
+
+.control-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+}
+
+/* Section Styles */
+.control-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(226, 199, 138, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.control-section h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #E2C78A;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Configuration Section */
+.config-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.config-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.config-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.config-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(226, 199, 138, 0.2);
+    border-radius: 6px;
+    padding: 12px;
+    color: #E5E7EB;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.config-input:focus {
+    outline: none;
+    border-color: #E2C78A;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #E2C78A, #d4b278);
+    color: #050812;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Scene Buttons */
+.scene-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.scene-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(226, 199, 138, 0.2);
+    color: #E5E7EB;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.scene-btn:hover:not(:disabled) {
+    background: rgba(226, 199, 138, 0.1);
+    border-color: #E2C78A;
+}
+
+.scene-btn.active {
+    background: rgba(226, 199, 138, 0.15);
+    border-color: #E2C78A;
+    color: #E2C78A;
+}
+
+.scene-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Draw Section */
+.draw-status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.status-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.status-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #9CA3AF;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #E2C78A;
+}
+
+.status-value.drawn {
+    color: #10b981;
+}
+
+.status-value.remaining {
+    color: #f59e0b;
+}
+
+.start-draw-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #2D6FEF, #1e56d9);
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.start-draw-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(45, 111, 239, 0.3);
+}
+
+.start-draw-btn:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    color: #9CA3AF;
+    cursor: not-allowed;
+}
+
+/* Winners Table */
+.no-winners {
+    text-align: center;
+    color: #9CA3AF;
+    padding: 40px;
+    font-style: italic;
+}
+
+.winners-table {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.winners-header {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px 100px;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(226, 199, 138, 0.1);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #E2C78A;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.winner-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px 100px;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.winner-row:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.prize-num {
+    font-weight: 700;
+    color: #E2C78A;
+}
+
+.ticket-num {
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.time {
+    font-size: 0.9rem;
+    color: #9CA3AF;
+}
+
+.show-btn {
+    background: rgba(45, 111, 239, 0.2);
+    border: 1px solid #2D6FEF;
+    color: #6ba3ff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.show-btn:hover {
+    background: rgba(45, 111, 239, 0.3);
+}
+
+/* Danger Zone */
+.danger-section {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.reset-btn {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: #ef4444;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.reset-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+}

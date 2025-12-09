@@ -1,0 +1,140 @@
+/* Suspense Container Base */
+.suspense-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: #050812;
+}
+
+/* Lines Style */
+.lines-style .lines-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0 10%;
+}
+
+.lines-style .line {
+    position: absolute;
+    width: 3px;
+    background: linear-gradient(to top, #E2C78A, transparent);
+    opacity: 0.3;
+    transform-origin: bottom;
+}
+
+.lines-style .bars-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.lines-style .bar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #E2C78A, transparent);
+    opacity: 0.4;
+    transform-origin: left;
+}
+
+/* Number Display */
+.number-display {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.number-display .number {
+    font-size: clamp(5rem, 12vw, 10rem);
+    font-weight: 900;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 40px rgba(226, 199, 138, 0.3);
+}
+
+/* Status Text */
+.status-text {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 300;
+    color: #9CA3AF;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+/* Reveal Scene Glow */
+.reveal-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(226, 199, 138, 0.2), transparent 70%);
+    filter: blur(60px);
+}
+
+/* Particles Style */
+.particles-style .particles-field {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.particles-style .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #E2C78A;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+}
+
+.particles-style .central-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(226, 199, 138, 0.3), transparent 60%);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+/* Digits Style */
+.digits-style .digit-matrix {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.digits-style .bg-digit {
+    position: absolute;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #9CA3AF;
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+}
+
+.digits-style .highlight-bars {
+    position: absolute;
+    inset: 0;
+}
+
+.digits-style .highlight-bar {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #E2C78A, transparent);
+    transform-origin: center;
+}
